@@ -161,7 +161,7 @@ The <<tbl-results>> shows something important.
 
 == source code
 
-[source, javascript]
+[source, javascript,linenums]
 ----
 export default class MyComponent extends React.Component {
     render() {

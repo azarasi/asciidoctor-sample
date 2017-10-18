@@ -100,18 +100,18 @@ asciidoctor-pdfで使用している日本語フォントに合わせれば、sv
 [plantuml,sample-classdiagram,svg]
 ----
 skinparam {
-  defaultFontName "Migu 1M"
+  defaultFontName "MigMix 1p"
 }
 
 class "クラスAプ" {
   +メソッド1()
 }
-class "クラスBプ" {
+class "クラスB00" {
   +メソッド2()
 }
 class "クラスC" {
 }
-"クラスAプ" -- "クラスBプ"
+"クラスAプ" -- "クラスB00"
 "クラスAプ" <|-- "クラスC"
 ----
 
@@ -124,9 +124,9 @@ class "クラスC" {
 .シーケンス図
 [plantuml,sample-sequence,svg]
 ----
-@startuml{plantuml_seq_sample.png}
+@startuml{plantuml_seq_sample.svg}
 skinparam {
-  defaultFontName "Migu 1M"
+  defaultFontName "MigMix 1p"
 }
 
 title シーケンス図のサンプル
@@ -144,7 +144,7 @@ control -> model : << new >>
 control -> model : データ検索
 activate model
 control <-- model : 検索結果
-note right : ヒットしたものをリストで返します。プ
+note right : ヒットしたものをリストで返します。プ00
 deactivate model
 destroy model
 
@@ -175,16 +175,16 @@ asciidoctor-pdfで使用している日本語フォントに合わせれば、sv
 ----
 digraph G {
   node [
-    fontname = "Migu 1M"
+    fontname = "MigMix 1p"
   ]
 
-	mainメインプ -> parse -> execute;
-	mainメインプ -> init;
-	mainメインプ -> cleanup;
+	mainメインプ00 -> parse -> execute;
+	mainメインプ00 -> init;
+	mainメインプ00 -> cleanup;
 	execute -> make_string;
 	execute -> printf
 	init -> make_string;
-	mainメインプ -> printf;
+	mainメインプ00 -> printf;
 	execute -> compare;
 }
 ----

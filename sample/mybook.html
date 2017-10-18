@@ -573,22 +573,85 @@ table.CodeRay td.code>pre{padding:0}
 <h4 id="_ditaa">1.1.1. ditaa</h4>
 <div id="ditaa-diagram_test" class="imageblock">
 <div class="content">
-<img src="./images/sample-ditaa-diagram.png" alt="ditaa diagram sample" width="540" height="280">
+<img src="./images/sample-ditaa-diagram.png" alt="sample ditaa diagram" width="540" height="280">
 </div>
-<div class="title">ditaa diagram sample</div>
+<div class="title">図 1. ditaa diagram sample</div>
 </div>
 <div id="ditaa-diagram_test1" class="imageblock">
 <div class="content">
 <img src="./images/sample-ditaa-diagram.png" alt="sample ditaa diagram">
 </div>
-<div class="title">図 1. ditaa diagram sample2</div>
+<div class="title">図 2. ditaa diagram sample2</div>
 </div>
 <div id="fig_azarasi2" class="imageblock">
 <div class="content">
 <img src="./images/azarasi.jpg" alt="azarasi">
 </div>
-<div class="title">図 2. close up the azarasi</div>
+<div class="title">図 3. close up the azarasi</div>
 </div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> checked</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> also checked</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> not checked</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">タスク名</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>完了？</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">タスク１</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> checked</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> also checked</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> not checked</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">タスク２</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> checked</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">タスク３</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> not checked</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -596,6 +659,21 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sect1">
 <h2 id="_ほげほげサービス仕様書">2. ほげほげサービス仕様書</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>あざらし株式会社 &lt;<a href="mailto:doc.writer@example.jp">doc.writer@example.jp</a>&gt;
+v1.0, 2017-08-01
+:toc: left
+:toclevels: 3
+:sectnums:
+:pagenums:
+:toc-title: 目次
+:figure-caption: 図
+:table-caption: 表
+:imagesdir: ./images/
+:source-highlighter: coderay
+:icons: font
+:xrefstyle: full</p>
+</div>
 <div class="sect2">
 <h3 id="_はじめに">2.1. はじめに</h3>
 <hr>
@@ -687,13 +765,13 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
 ええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええ。</p>
 </div>
 <div class="paragraph">
-<p><a href="#fig_azarasi">図 3, &#8220;close up the azarasi&#8221;</a>による。</p>
+<p><a href="#fig_azarasi">図 4, &#8220;close up the azarasi&#8221;</a>による。</p>
 </div>
 <div id="fig_azarasi" class="imageblock">
 <div class="content">
 <img src="./images/azarasi.jpg" alt="azarasi">
 </div>
-<div class="title">図 3. close up the azarasi</div>
+<div class="title">図 4. close up the azarasi</div>
 </div>
 <div style="page-break-after: always;"></div>
 <div class="sect3">
@@ -962,11 +1040,37 @@ for this interval.</p></td>
 <h3 id="_source_code">2.4. source code</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="javascript"><span class="reserved">export</span> <span class="keyword">default</span> <span class="reserved">class</span> MyComponent <span class="reserved">extends</span> React.Component {
+<pre class="CodeRay highlight"><code data-lang="javascript"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> <span class="reserved">class</span> MyComponent <span class="reserved">extends</span> React.Component {
     render() {
         <span class="tag">&lt;div&gt;</span>Hello, World!<span class="tag">&lt;/div&gt;</span>
     }
-}</code></pre>
+}</pre></td>
+</tr></table></code></pre>
+</div>
+</div>
+<div id="app-listing" class="listingblock">
+<div class="title">app.rb</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="ruby"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre>require <span class="string"><span class="delimiter">'</span><span class="content">sinatra</span><span class="delimiter">'</span></span>
+
+get <span class="string"><span class="delimiter">'</span><span class="content">/hi</span><span class="delimiter">'</span></span> <span class="keyword">do</span>
+  <span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World!</span><span class="delimiter">&quot;</span></span>
+<span class="keyword">end</span></pre></td>
+</tr></table></code></pre>
 </div>
 </div>
 </div>
