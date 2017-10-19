@@ -17,8 +17,10 @@ v1.0, 2016-08-01
 
 :leveloffset: +1
 
-include::d.adoc[]
+include::mybook1.adoc[]
 
-include::sample1.adoc[]
+include::mybook2.adoc[]
+
+include::mybook3.adoc[]
 
 :leveloffset: -1

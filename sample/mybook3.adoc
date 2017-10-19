@@ -1,6 +1,4 @@
 = AsciiDoctor-diagramサンプル
-株式会社 あざらし
-v0.1(Draft) 2016/12/12
 :toc: left
 :toc-title: 目次
 :figure-caption: 図
@@ -48,9 +46,9 @@ WARNING: これはWARNINNGのサンプルです。
 ああああああああああああああああああああああ。 +
 ええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええ。
 
-<<fig_azarasi>>による。
+<<fig_azarasi1>>による。
 
-[[fig_azarasi]]
+[[fig_azarasi1]]
 .close up the azarasi
 image::azarasi.jpg[]
 
@@ -61,11 +59,11 @@ image::azarasi.jpg[]
 
 === ditaaのテスト
 
-<<ditaa-diagram_test>>はditaaのサンプルです。 +
+<<ditaa-diagram_test00>>はditaaのサンプルです。 +
 ditaaではascii文字のみ使用可能で日本語は無理っぽい。形式はpngのみ。
 
-[[ditaa-diagram_test]]
-.ditaa daiagram sample
+[[ditaa-diagram_test00]]
+.ditaa daiagram sample00
 [ditaa,sample-ditaa-diagram]
 ----
                    +-------------+
@@ -196,76 +194,6 @@ digraph G {
 .ditaa daiagram sample2
 image::sample-ditaa-diagram.png[]
 
-
-== 表のテスト
-
-表のサンプルです。
-
-<<tbl.1>>に示す。
-
-[[tbl.1]]
-.ほげほげ一覧
-[width="50",cols="<1,^1,^1",options="header,strong"]
-|=======================
-|Col 1|Col 2      |Col 3
-|1    |Item 1     |a
-|2    |Item 2     |b
-|3    |Item 3     |c
-|=======================
-
-ああああ
-
-[[tbl.2]]
-.ほげほげ2
-[width="50",options="header",align=left]
-|=======================
-|Col 1|Col 2      |Col 3
-|1    |Item 1     |a
-|2    |Item 2     |b
-|3    |Item 3     |c
-|=======================
-
-[[tbl.3]]
-.ほげほげ3
-|=======================
-|Col 1|Col 2      |Col 3
-|1    |Item 1     |a
-|2    |Item 2     |b
-|3    |Item 3     |c
-|=======================
-
-
-[[tbl.4]]
-.Multiline cells, row/col span
-|====
-|Date |Duration |Avg HR |Notes
-|22-Aug-08 .2+^.^|10:24 | 157 |
-Worked out MSHR (max sustainable
-heart rate) by going hard
-for this interval.
-|22-Aug-08 | 152 |
-Back-to-back with previous interval.
-|24-Aug-08 3+^|none
-|====
-
-<<tbl.2>>に示す。 +
-<<tbl.3>>に示す。 +
-<<tbl.4>>に示す。
-
-[[tbl-results]]
-.Results
-[options="header"]
-|====
-| Users | Errors | Tests
-| 8 | 0 | 1639
-|====
-
-<<tbl-results>> は何か重要なことを示している。
-
-
-//改頁
-<<<
-
 == ソースコード
 
 [source, javascript, linenums]
@@ -276,3 +204,5 @@ export default class MyComponent extends React.Component {
     }
 }
 ----
+
+<<<

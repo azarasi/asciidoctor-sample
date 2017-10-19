@@ -1,0 +1,68 @@
+= AsciiDoctor-diagram
+:toc: left
+:toclevels: 3
+:pagenums:
+:sectnums:
+:imagesdir: ./images
+
+== asciidoctor-diagram
+
+=== ditaa
+
+[[ditaa-diagram_test]]
+.ditaa diagram sample
+[ditaa,sample-ditaa-diagram]
+----
+                   +-------------+
+                   | Asciidoctor |-------+
+                   |   diagram   |       |
+                   +-------------+       | PNG out
+                       ^                 |
+                       | ditaa in        |
+                       |                 v
+ +--------+   +--------+----+    /---------------\
+ |        | --+ Asciidoctor +--> |               |
+ |  Text  |   +-------------+    |   Beautiful   |
+ |Document|   |   !magic!   |    |    Output     |
+ |     {d}|   |             |    |               |
+ +---+----+   +-------------+    \---------------/
+     :                                   ^
+     |          Lots of work             |
+     +-----------------------------------+
+----
+
+[[ditaa-diagram_test1]]
+.ditaa diagram sample2
+image::sample-ditaa-diagram.png[]
+
+[[fig_azarasi2]]
+.close up the azarasi
+image::azarasi.jpg[]
+
+
+* [*] checked
+* [x] also checked
+* [ ] not checked
+
+
+[cols="50,50a"]
+|===
+|タスク名
+|完了？
+
+|タスク１
+|
+* [*] checked
+* [x] also checked
+* [ ] not checked
+
+|タスク２
+|
+* [x] checked
+
+|タスク３
+|
+* [ ] not checked
+|===
+
+<<<
