@@ -1,4 +1,6 @@
 #user defined
 logo
 sample_specsheet
-
+*.jpg
+*.png
+*.svg

@@ -100,7 +100,7 @@ asciidoctor-pdfで使用している日本語フォントに合わせれば、sv
 [plantuml,sample-classdiagram,svg]
 ----
 skinparam {
-  defaultFontName "MigMix 1p"
+  defaultFontName "Mgen+ 1cp regular"
 }
 
 class "クラスAプ" {
@@ -111,8 +111,8 @@ class "クラスB00" {
 }
 class "クラスC" {
 }
-"クラスAプ" -- "クラスB00"
-"クラスAプ" <|-- "クラスC"
+"クラスAプパ" -- "クラスB00"
+"クラスAプパ" <|-- "クラスC"
 ----
 
 //改頁
@@ -126,7 +126,7 @@ class "クラスC" {
 ----
 @startuml{plantuml_seq_sample.svg}
 skinparam {
-  defaultFontName "MigMix 1p"
+  defaultFontName "Mgen+ 1cp regular"
 }
 
 title シーケンス図のサンプル
@@ -175,7 +175,7 @@ asciidoctor-pdfで使用している日本語フォントに合わせれば、sv
 ----
 digraph G {
   node [
-    fontname = "MigMix 1p"
+    fontname = "Mgen+ 1cp regular"
   ]
 
 	mainメインプ00 -> parse -> execute;
