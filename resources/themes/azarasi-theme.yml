@@ -19,11 +19,11 @@ font:
       bold: mplus1p-regular-fallback.ttf
       italic: mplus1p-regular-fallback.ttf
       bold_italic: mplus1p-regular-fallback.ttf
-    mgenplus-1cp:
-      normal: mgenplus-1cp-regular.ttf
-      bold: mgenplus-1cp-bold.ttf
-      italic: mgenplus-1cp-regular-oblique.ttf
-      bold_italic: mgenplus-1cp-bold-oblique.ttf
+    M+ 1c:
+      normal: mplus-1c-regular.ttf
+      bold: mplus-1c-bold.ttf
+      italic: mplus-1c-regular-oblique.ttf
+      bold_italic: mplus-1c-bold-oblique.ttf
   fallbacks:
     - M+ 1p Fallback
 page:
@@ -47,7 +47,7 @@ base:
   #font_color: [0, 0, 0, 92%]
   #font_family: Noto Serif
   #font_family: AozoraMincho
-  font_family: mgenplus-1cp
+  font_family: M+ 1c
   # choose one of these font_size/line_height_length combinations
   #font_size: 14
   #line_height_length: 20
