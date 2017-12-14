@@ -1,6 +1,8 @@
 #user defined
 logo
 sample_specsheet
+sample\.asciidoctor
+sample\images
 *.jpg
 *.png
 *.svg

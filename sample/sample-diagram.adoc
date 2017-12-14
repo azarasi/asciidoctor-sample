@@ -100,7 +100,7 @@ asciidoctor-pdfで使用している日本語フォントに合わせれば、sv
 [plantuml,sample-classdiagram,svg]
 ----
 skinparam {
-  defaultFontName "Mgen+ 1cp regular"
+  defaultFontName "mplus-1c-regular"
 }
 
 class "クラスAプ" {
@@ -126,7 +126,7 @@ class "クラスC" {
 ----
 @startuml{plantuml_seq_sample.svg}
 skinparam {
-  defaultFontName "Mgen+ 1cp regular"
+  defaultFontName "mplus-1c-regular"
 }
 
 title シーケンス図のサンプル
@@ -175,7 +175,7 @@ asciidoctor-pdfで使用している日本語フォントに合わせれば、sv
 ----
 digraph G {
   node [
-    fontname = "Mgen+ 1cp regular"
+    fontname = "mplus-1c-regular"
   ]
 
 	mainメインプ00 -> parse -> execute;

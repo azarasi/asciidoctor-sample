@@ -65,7 +65,7 @@ image::azarasi.jpg[]
 * [x] also checked
 * [ ] not checked
 
-
+.check list
 [cols="50,50a"]
 |===
 |タスク名
