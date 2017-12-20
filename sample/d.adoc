@@ -61,19 +61,22 @@ image::sample-ditaa-diagram.png[]
 image::azarasi.jpg[]
 
 
-* [*] checked
+* [ ] checked
 * [x] also checked
 * [ ] not checked
 
 .check list
-[cols="50,50a"]
+[cols="50a,50a"]
 |===
 |タスク名
 |完了？
 
-|タスク１
 |
-* [*] checked
+* [ ] checked
+* [x] also checked
+* [ ] not checked
+|
+* [ ] checked
 * [x] also checked
 * [ ] not checked
 
