@@ -530,10 +530,12 @@ table.CodeRay td.code>pre{padding:0}
 <ul class="sectlevel1">
 <li><a href="#_セクション">1. セクション</a>
 <ul class="sectlevel2">
-<li><a href="#_はじめに_その１">1.1. はじめに　その１</a></li>
+<li><a href="#_脚注">1.1. 脚注</a></li>
+<li><a href="#_段落">1.2. 段落</a></li>
+<li><a href="#_リスト">1.3. リスト</a></li>
 </ul>
 </li>
-<li><a href="#_次に">2. 次に</a></li>
+<li><a href="#_図">2. 図</a></li>
 <li><a href="#_asciidoctor_diagramのテスト">3. asciidoctor-diagramのテスト</a>
 <ul class="sectlevel2">
 <li><a href="#_ditaaのテスト">3.1. ditaaのテスト</a></li>
@@ -555,19 +557,8 @@ table.CodeRay td.code>pre{padding:0}
 <code>==</code>, <code>===</code>, &#8230;&#8203; のように <code>=</code> を重ねるとレベルが1つ下がります。</p>
 </div>
 <hr>
-<div class="paragraph">
-<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-</div>
 <div class="sect2">
-<h3 id="_はじめに_その１">1.1. はじめに　その１</h3>
-<div class="paragraph">
-<p>ええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええ<br>
-えええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええ。
-ええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええ。</p>
-</div>
-<div class="paragraph">
-<p>えええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええ。</p>
-</div>
+<h3 id="_脚注">1.1. 脚注</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -630,15 +621,163 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div style="page-break-after: always;"></div>
 </div>
+<div class="sect2">
+<h3 id="_段落">1.2. 段落</h3>
+<div class="paragraph">
+<p>改行は、行末に半角スペース＋"+"です。<br>
+ああああああああああああああああああああああ。<br>
+えええええええええええええええええええええええええええええええええええええええええええええええええええええええええええ。<br>
+おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお。<br>
+いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい。うううううううううううううううううううううううううううううううううううううううううううううううう。<br></p>
+</div>
+<div class="paragraph">
+<p>太字、斜体字<br>
+<strong>ほげ</strong> ほげhoge <em>ほげhogehogeほげ</em> ほげほげほげほげ <strong><em>ほげほげほげほげ</em></strong> ほげほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげ。</p>
+</div>
+<div class="paragraph">
+<p>マーカ<br>
+<mark>ほげほげほえほげほげほげ</mark> ほげほげほげほげ <mark>ほげほげほげほげほげほえほほげほげほげほげほげほげ</mark> ほほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげほげほげほげほえほほげほげほげほえほほげ <mark>ほげほげほげ</mark></p>
+</div>
+<div class="paragraph">
+<p>H<sub>2</sub>O E=mc<sup>2</sup> …… 下付き文字、上付き文字</p>
+</div>
+<div class="paragraph">
+<p><strong>H<sub>2</sub>O E=mc<sup>2</sup></strong> …… 太文字</p>
+</div>
+<div class="paragraph">
+<p><em>H<sub>2</sub>O E=mc<sup>2</sup></em> …… 斜体字</p>
+</div>
+<div class="paragraph">
+<p><strong><em>H<sub>2</sub>O E=mc<sup>2</sup></em></strong> …… 太文字+斜体字</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_リスト">1.3. リスト</h3>
+<div class="olist arabic">
+<div class="title">順序付きリスト</div>
+<ol class="arabic">
+<li>
+<p>ほげほげほげ</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>ほげほげほげ</p>
+</li>
+<li>
+<p>ほげほげほげ</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>ああああ</p>
+</li>
+<li>
+<p>いいい</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>ほげほげ</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>ほげほげhogehoge</p>
+</li>
+<li>
+<p>ほげほげhogehoge</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ほげほげ</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>ほげほげhogehoge</p>
+</li>
+<li>
+<p>ほげほげhogehoge</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">順序なしリスト</div>
+<ul>
+<li>
+<p>ほげほげほげ</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ほげほげほげ</p>
+</li>
+<li>
+<p>ほげほげほげ</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ほげほげ</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ほげほげhogehoge</p>
+</li>
+<li>
+<p>ほげほげhogehoge</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist checklist">
+<div class="title">チェックリスト</div>
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> チェック済みの要素</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> これもチェック済みの要素</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> 未チェックの要素</p>
+</li>
+<li>
+<p>通常の順序無しリストの要素</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">ラベル１</dt>
+<dd>
+<p>ラベル１の定義<br>
+ラベル１の定義の続き</p>
+</dd>
+<dt class="hdlist1">ラベル２</dt>
+<dd>
+<p>ラベル２の定義</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_次に">2. 次に</h2>
+<h2 id="_図">2. 図</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>ああああああああああああああああああああああ。<br>
-ええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええ。</p>
-</div>
 <div class="paragraph">
 <p><a href="#fig_azarasi">図 1</a>による。</p>
 </div>
@@ -662,7 +801,7 @@ ditaaではascii文字のみ使用可能で日本語は無理っぽい。形式�
 </div>
 <div id="ditaa-diagram_test" class="imageblock">
 <div class="content">
-<img src="./images/sample-ditaa-diagram.png" alt="sample ditaa diagram" width="540" height="280">
+<img src="./images/fig3-ditaa-diagram.png" alt="fig3 ditaa diagram" width="540" height="280">
 </div>
 <div class="title">図 2. ditaa daiagram sample</div>
 </div>
@@ -679,7 +818,7 @@ asciidoctor-pdfで使用している日本語フォントに合わせれば、sv
 </div>
 <div id="main-classes" class="imageblock">
 <div class="content">
-<img src="./images/sample-classdiagram.svg" alt="sample classdiagram" width="217" height="207">
+<img src="./images/fig3-classdiagram.svg" alt="fig3 classdiagram" width="285" height="207">
 </div>
 <div class="title">図 3. クラス図</div>
 </div>
@@ -689,7 +828,7 @@ asciidoctor-pdfで使用している日本語フォントに合わせれば、sv
 </div>
 <div id="sequence1" class="imageblock">
 <div class="content">
-<img src="./images/sample-sequence.svg" alt="sample sequence" width="564" height="498">
+<img src="./images/fig3-sequence.svg" alt="fig3 sequence" width="562" height="498">
 </div>
 <div class="title">図 4. シーケンス図</div>
 </div>
@@ -706,17 +845,11 @@ asciidoctor-pdfで使用している日本語フォントに合わせれば、sv
 </div>
 <div id="fig_diagram" class="imageblock">
 <div class="content">
-<img src="./images/sample-dot-diagram1.svg" alt="sample dot diagram1" width="462" height="345">
+<img src="./images/fig3-dot-diagram1.svg" alt="fig3 dot diagram1" width="461" height="345">
 </div>
 <div class="title">図 5. The graphviz block</div>
 </div>
 <div style="page-break-after: always;"></div>
-<div id="ditaa-diagram_test2" class="imageblock">
-<div class="content">
-<img src="./images/sample-ditaa-diagram.png" alt="sample ditaa diagram">
-</div>
-<div class="title">図 6. ditaa daiagram sample2</div>
-</div>
 </div>
 </div>
 </div>
@@ -913,13 +1046,31 @@ for this interval.</p></td>
 </tr></table></code></pre>
 </div>
 </div>
+<div id="app-listing" class="listingblock">
+<div class="title">app.rb</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="ruby"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre>require <span class="string"><span class="delimiter">'</span><span class="content">sinatra</span><span class="delimiter">'</span></span>
+
+get <span class="string"><span class="delimiter">'</span><span class="content">/hi</span><span class="delimiter">'</span></span> <span class="keyword">do</span>
+  <span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World!</span><span class="delimiter">&quot;</span></span>
+<span class="keyword">end</span></pre></td>
+</tr></table></code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 0.1(Draft) 2016/12/12<br>
-Last updated 2017-10-18 22:55:29 東京 (標準時)
+Last updated 2017-12-21 01:24:11 東京 (標準時)
 </div>
 </div>
 </body>
