@@ -1,6 +1,4 @@
-= AsciiDoctor-diagramサンプル
-株式会社 あざらし
-v0.1(Draft) 2016/12/12
+:lang: ja
 :toc: left
 :toc-title: 目次
 :figure-caption: 図
@@ -10,8 +8,14 @@ v0.1(Draft) 2016/12/12
 :sectnums:
 :imagesdir: ./images
 :source-highlighter: coderay
-:icons: font
-:xrefstyle: short
+:xrefstyle: full
+:author: あざらし株式会社
+:email: doc.writer@example.jp
+:revnumber: 1.0draft
+:revdate: 2017/10/25
+:revremark: 初版
+
+= AsciiDoctor-diagramサンプル
 
 == セクション
 
@@ -20,22 +24,6 @@ v0.1(Draft) 2016/12/12
 
 //水平線 行コメントは表示されません。
 '''
-
-=== 脚注
-
-NOTE: これはNOTEのサンプルです。
-
-TIP: これはTIPのサンプルです。
-
-IMPORTANT: これはIMPOTANTのサンプルです。
-
-CAUTION: これはCAUTIONのサンプルです。
-
-WARNING: これはWARNINNGのサンプルです。
-
-//改頁
-<<<
-
 === 段落
 改行は、行末に半角スペース＋"+"です。 +
 ああああああああああああああああああああああ。 +
@@ -43,11 +31,12 @@ WARNING: これはWARNINNGのサンプルです。
 おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお。 +
 いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい。うううううううううううううううううううううううううううううううううううううううううううううううう。 +
 
-太字、斜体字 +
+.太字、斜体字
 *ほげ* ほげhoge _ほげhogehogeほげ_ ほげほげほげほげ *_ほげほげほげほげ_* ほげほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげ。
 
-マーカ +
-#ほげほげほえほげほげほげ# ほげほげほげほげ #ほげほげほげほげほげほえほほげほげほげほげほげほげ# ほほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげほげほげほげほえほほげほげほげほえほほげ #ほげほげほげ#
+.マーカ
+#ほげほげほえほげほげほげ# ほげほげほげほげ #ほげほげほげほげほげほえほほげほげほげほげほげほげ# ほほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげほえほほげほげほげほげほげほげほげほげほげほえほほげほげほげほえほほげ #ほげほげほげ# +
+*マーカはpdfでは表示されない？*
 
 H~2~O E=mc^2^ …… 下付き文字、上付き文字
 
@@ -94,6 +83,20 @@ _H~2~O E=mc^2^_ …… 斜体字
 ラベル２::
 ラベル２の定義
 
+=== 脚注
+
+NOTE: これはNOTEのサンプルです。
+
+TIP: これはTIPのサンプルです。
+
+IMPORTANT: これはIMPOTANTのサンプルです。
+
+CAUTION: これはCAUTIONのサンプルです。
+
+WARNING: これはWARNINNGのサンプルです。
+
+//改頁
+<<<
 == 図
 
 <<fig_azarasi>>による。
@@ -101,6 +104,7 @@ _H~2~O E=mc^2^_ …… 斜体字
 [[fig_azarasi]]
 .close up the azarasi
 image::azarasi.jpg[]
+
 
 //改頁
 <<<
@@ -113,7 +117,7 @@ image::azarasi.jpg[]
 ditaaではascii文字のみ使用可能で日本語は無理っぽい。形式はpngのみ。
 
 [[ditaa-diagram_test]]
-.ditaa daiagram sample
+.ditaa diagram sample
 [ditaa,fig3-ditaa-diagram,png]
 ....
                    +-------------+
@@ -152,16 +156,16 @@ skinparam {
   defaultFontName "mplus-1c-regular"
 }
 
-class "クラスAプ" {
+class "クラスA" {
   +メソッド1()
 }
-class "クラスB00" {
+class "クラスB" {
   +メソッド2()
 }
 class "クラスC" {
 }
-"クラスAプパ" -- "クラスB00"
-"クラスAプパ" <|-- "クラスC"
+"クラスA" -- "クラスB"
+"クラスA" <|-- "クラスC"
 @enduml
 ....
 
@@ -194,7 +198,7 @@ control -> model : << new >>
 control -> model : データ検索
 activate model
 control <-- model : 検索結果
-note right : ヒットしたものをリストで返します。プ00
+note right : ヒットしたものをリストで返します
 deactivate model
 destroy model
 
@@ -217,9 +221,9 @@ deactivate view
 [line-through]#種類をpngとすれば日本語（UTF-8）でも記述可能。svgとするときはascii文字のみで。# +
 asciidoctor-pdfで使用している日本語フォントに合わせれば、svgでもOKの様子。
 
-<<fig_diagram>>はGraphVizのサンプルです。
+<<fig_graphviz1>>はGraphVizのサンプルです。
 
-[[fig_diagram]]
+[[fig_graphviz1]]
 .The graphviz block
 [graphviz,fig3-dot-diagram1,svg]
 ....
@@ -228,19 +232,27 @@ digraph G {
     fontname = "mplus-1c-regular"
   ]
 
-	mainメインプ00 -> parse -> execute;
-	mainメインプ00 -> init;
-	mainメインプ00 -> cleanup;
+	mainメイン -> parse -> execute;
+	mainメイン -> init;
+	mainメイン -> cleanup;
 	execute -> make_string;
 	execute -> printf
 	init -> make_string;
-	mainメインプ00 -> printf;
+	mainメイン -> printf;
 	execute -> compare;
 }
 ....
 
 //改頁
 <<<
+
+[[fig_graphviz2]]
+.The graphviz block2
+[graphviz,fig3-dot-diagram2,svg]
+....
+include::source\dot_process.gv[]
+....
+
 == 表のテスト
 
 表のサンプルです。
