@@ -3,6 +3,8 @@ logo/
 sample_specsheet/
 sample/.asciidoctor/
 sample/images/
+sample_prezen/.asciidoctor/
+sample_prezen/images/
 *.jpg
 *.png
 *.svg

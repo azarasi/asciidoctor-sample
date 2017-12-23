@@ -1,0 +1,158 @@
+digraph process1{
+graph [
+  charset = "UTF-8",
+//  bgcolor = "#EDEDED",
+  layout = dot,             //dot,circo,fdp,neato,osage,sfdp,twopi
+  splines = true,           //none,true,false(line),ortho
+  rankdir = LR,
+  nodesep = 0.3,
+  ranksep = 0.3,
+  fontname = "mplus-1c-regular",
+  compound = true
+];
+node [
+  shape = box,
+  style = "solid,filled",
+  fontname = "mplus-1c-regular",
+  fontsize = 11,
+  color = "#980030",        //枠線の色,plantuml風
+  fillcolor = "#FEFECE",    //塗りつぶす色,plantuml風
+  fontcolor = black         //フォント色,plantum風
+];
+edge [
+  color= "#980030",         //#980030 暗い赤
+  fontname = "mplus-1c-regular",
+  fontsize = 11,
+  fontcolor = "#980030",
+  arrowhead = onormal       //normalの塗りつぶしなし
+];
+
+subgraph cluster_SMU {
+  label = "SMU";
+  color = "#CCFFFF";
+  bgcolor = "#CCFFFF";
+
+  SWHost1[
+    label = "SWHost",
+    fixedsize = true,         //ノードの大きさを指定可能とする
+    width = 1.5,              //ノードの幅(インチ)
+    height = 1.2,             //ノードの高さ(インチ)
+    color = "#336666",        //ノードの枠線の色
+    fillcolor = "#336666",    //ノードを塗りつぶす色
+    fontcolor = yellow
+  ];
+  SWNic081[
+    label="SWNic08",
+    fixedsize = true,         //ノードの大きさを指定可能とする
+    width = 1.0,              //ノードの幅(インチ)
+    height = 0.5,             //ノードの高さ(インチ)
+    color = "#336666",        //ノードの枠線の色
+    fillcolor = "#336666",    //ノードを塗りつぶす色
+    fontcolor = yellow
+];
+
+  CPU      -> SWHost1 [dir = both,arrowhead=normal];
+  SWHost1  -> BMC [dir = both,arrowhead=normal];
+  SWNic081 -> BMC [dir = both,arrowhead=normal];
+}
+
+subgraph cluster_DR {
+  label = "DR";
+  color = "#CCFFFF";
+  bgcolor = "#CCFFFF";
+
+  SWNic082[
+    label = "SWNic08",
+    fixedsize = true,         //ノードの大きさを指定可能とする
+    width = 1.0,              //ノードの幅(インチ)
+    height = 0.5,             //ノードの高さ(インチ)
+    color = "#336666",        //ノードの枠線の色
+    fillcolor = "#336666",    //ノードを塗りつぶす色
+    fontcolor = yellow
+  ];
+}
+
+subgraph cluster_TCIM {
+  label = "TCIM";
+  color = "#CCFFFF";
+  bgcolor = "#CCFFFF";
+
+  SWHost2[
+    label = "SWHost",
+    fixedsize = true,         //ノードの大きさを指定可能とする
+    width = 1.5,              //ノードの幅(インチ)
+    height = 1.2,             //ノードの高さ(インチ)
+    color = "#336666",        //ノードの枠線の色
+    fillcolor = "#336666",    //ノードを塗りつぶす色
+    fontcolor = yellow
+    ];
+  SWNic083[
+    label = "SWNic08",
+    fixedsize = true,         //ノードの大きさを指定可能とする
+    width = 1.0,              //ノードの幅(インチ)
+    height = 0.5,             //ノードの高さ(インチ)
+    color = "#336666",        //ノードの枠線の色
+    fillcolor = "#336666",    //ノードを塗りつぶす色
+    fontcolor = yellow
+    ];
+
+  SWNic083 -> CMDデコード;
+  CMDデコード -> パルスCMD発生部;
+  CMDデコード -> シリアルCMD発生部;
+  バイレベルTLM収集部 -> TLM編集;
+  シリアルTLM収集部 -> TLM編集;
+  TLM編集 -> SWNic083;
+
+  CMD処理部 -> DirectCMD;
+  DirectCMD -> CMDデコード;
+  CMD処理部 -> DirectSpWCMD;
+  CMD処理部 -> NormalCMD;
+  DirectSpWCMD -> SWHost2;
+  NormalCMD -> SWHost2;
+
+  SWHost2 -> RealTLM;
+  SWHost2 -> ReproTLM;
+
+  RealTLM -> TLM処理部;
+  ReproTLM -> TLM処理部;
+
+  {rank = min;シリアルCMD発生部;バイレベルTLM収集部;シリアルTLM収集部;CMD処理部;TLM処理部; }
+  {rank = same;DirectCMD;DirectSpWCMD;NormalCMD;RealTLM;ReproTLM;}
+  {rank = same;CMDデコード;TLM編集;パルスCMD発生部;}
+  {rank = max;SWNic083;SWHost2;}
+}
+
+SWR[
+  color = 7,
+  fixedsize = true,         //ノードの大きさを指定可能とする
+  width = 1.5,              //ノードの幅(インチ)
+  height = 2.0,             //ノードの高さ(インチ)
+  color = "#336666",        //ノードの枠線の色
+  fillcolor = "#336666",    //ノードを塗りつぶす色
+  fontcolor = yellow
+];
+
+SWHost1 -> SWR [dir = both,arrowhead=normal];
+SWHost1 -> SWNic083 [dir = both,arrowhead=normal];
+SWNic082 -> SWR [dir = both,arrowhead=normal];
+AOCP -> SWR [dir = both,arrowhead=normal];
+DHHW -> SWR [dir = both,arrowhead=normal];
+
+SWHost2 -> SWR [dir = both,arrowhead=normal];
+SWHost2 -> SWNic081 [dir = both,arrowhead=normal];
+SWHost2 -> SWNic082 [dir = both,arrowhead=normal];
+
+SAP -> バイレベルTLM収集部;
+STRP -> CMD処理部;
+STRP -> シリアルTLM収集部;
+TLM処理部 -> STRP;
+パルスCMD発生部 -> STRP[label = "onoff"];
+シリアルCMD発生部 -> STRP;
+RDCMD -> CMD処理部;
+TLM処理部 -> RDTLM;
+パルスCMD発生部 -> SWR[label = "onoff"];
+パルスCMD発生部 -> CPU[label = "onoff",lhead = cluster_SMU];
+
+{rank = min;SAP;STRP;RDCMD;RDTLM;}
+
+}
